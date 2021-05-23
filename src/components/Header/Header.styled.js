@@ -4,9 +4,11 @@ export const HeaderWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  position: fixed;
   boxshadow: none;
-  padding: 10px;
+  padding: 0 10px 10px 10px;
+  height: 80px;
+  transition: all 300ms ease-in;
+  position: fixed;
 `;
 
 export const Title = styled.div`
@@ -17,4 +19,5 @@ export const Title = styled.div`
 export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  color: white;
 `;

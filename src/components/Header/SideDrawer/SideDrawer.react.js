@@ -3,6 +3,8 @@ import { scroller } from "react-scroll";
 import { Drawer, Button } from "antd";
 import { MenuUnfoldOutlined } from "@ant-design/icons";
 
+import { SideDrawerWrapper } from "./SideDrawer.styled";
+
 export const SideDrawer = () => {
   const [visible, setVisible] = useState(false);
 
@@ -35,9 +37,9 @@ export const SideDrawer = () => {
   const renderItem = (item) => <p key={item.where}>{item.value}</p>;
 
   return (
-    <>
-      <Button type="text" onClick={showDrawer}>
-        <MenuUnfoldOutlined style={{ fontSize: "32px" }} />
+    <SideDrawerWrapper>
+      <Button type="text" onClick={showDrawer} style={{ padding: "20px" }}>
+        <MenuUnfoldOutlined style={{ fontSize: "32px", color: "white" }} />
       </Button>
       <Drawer
         title="Menu"
@@ -48,6 +50,6 @@ export const SideDrawer = () => {
       >
         {links.map((item) => renderItem(item))}
       </Drawer>
-    </>
+    </SideDrawerWrapper>
   );
 };

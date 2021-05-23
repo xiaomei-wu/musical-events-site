@@ -20,7 +20,9 @@ export const Header = () => {
 
   return (
     <HeaderWrapper
-      style={{ backgroundColor: showHeader ? "#2f2f2f" : "transparent" }}
+      style={{
+        backgroundColor: showHeader ? "#2f2f2f" : "transparent",
+      }}
     >
       <TitleWrapper>
         <Title>The Venue</Title>
