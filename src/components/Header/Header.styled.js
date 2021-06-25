@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HeaderWrapper = styled.div`
   width: 100%;
@@ -13,7 +13,7 @@ export const HeaderWrapper = styled.div`
 
 export const Title = styled.div`
   font-size: 32px;
-  font-family: "Righteous", cursive;
+  font-family: 'Righteous', cursive;
 `;
 
 export const TitleWrapper = styled.div`

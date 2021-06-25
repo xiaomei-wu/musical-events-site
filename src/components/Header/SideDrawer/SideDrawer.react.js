@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { scroller } from "react-scroll";
-import { Drawer, Button } from "antd";
-import { MenuUnfoldOutlined } from "@ant-design/icons";
+import React, { useState } from 'react';
+import { scroller } from 'react-scroll';
+import { Drawer, Button } from 'antd';
+import { MenuUnfoldOutlined } from '@ant-design/icons';
 
-import { SideDrawerWrapper } from "./SideDrawer.styled";
+import { SideDrawerWrapper } from './SideDrawer.styled';
 
 export const SideDrawer = () => {
   const [visible, setVisible] = useState(false);
@@ -17,14 +17,14 @@ export const SideDrawer = () => {
   };
 
   const links = [
-    { where: "featured", value: "To top" },
-    { where: "venuenfo", value: "Venue NFO" },
-    { where: "highlights", value: "Highlights" },
-    { where: "pricing", value: "Pricing" },
-    { where: "location", value: "Location" },
+    { where: 'featured', value: 'To top' },
+    { where: 'venuenfo', value: 'Venue NFO' },
+    { where: 'highlights', value: 'Highlights' },
+    { where: 'pricing', value: 'Pricing' },
+    { where: 'location', value: 'Location' },
   ];
 
-  const scrollToElement = (element) => {
+  const scrollToElement = element => {
     scroller.scrollTo(element, {
       duration: 1500,
       delay: 100,
@@ -34,12 +34,16 @@ export const SideDrawer = () => {
     onClose();
   };
 
-  const renderItem = (item) => <p key={item.where}>{item.value}</p>;
+  const renderItem = item => (
+    <p button onClick={() => alert(item.where)} key={item.where}>
+      {item.value}
+    </p>
+  );
 
   return (
     <SideDrawerWrapper>
-      <Button type="text" onClick={showDrawer} style={{ padding: "20px" }}>
-        <MenuUnfoldOutlined style={{ fontSize: "32px", color: "white" }} />
+      <Button type="text" onClick={showDrawer} style={{ padding: '20px' }}>
+        <MenuUnfoldOutlined style={{ fontSize: '32px', color: 'white' }} />
       </Button>
       <Drawer
         title="Menu"
@@ -48,7 +52,7 @@ export const SideDrawer = () => {
         onClose={onClose}
         visible={visible}
       >
-        {links.map((item) => renderItem(item))}
+        {links.map(item => renderItem(item))}
       </Drawer>
     </SideDrawerWrapper>
   );

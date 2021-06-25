@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CountDownWrapper = styled.div`
   position: absolute;
@@ -27,7 +27,7 @@ export const CountDownTime = styled.div`
 `;
 
 export const CountDownItem = styled.div`
-  :last-child {
+  &:last-child {
     border: none;
   }
 `;

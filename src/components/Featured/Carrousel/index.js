@@ -1,1 +1,1 @@
-export { Carrousel } from "./Carrousel.react";
+export { Carrousel } from './Carrousel.react';

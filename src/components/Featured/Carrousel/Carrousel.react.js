@@ -1,16 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-import slide_one from "../../../resources/images/slide_one.jpg";
-import slide_two from "../../../resources/images/slide_two.jpg";
-import slide_three from "../../../resources/images/slide_three.jpg";
+import slideOne from '../../../resources/images/slide_one.jpg';
+import slideTwo from '../../../resources/images/slide_two.jpg';
+import slideThree from '../../../resources/images/slide_three.jpg';
 
-import { CarrouselWrapper, CarrouselImage } from "./Carrrousel.styled";
+import { CarrouselWrapper, CarrouselImage } from './Carrrousel.styled';
 
 export const Carrousel = () => {
+  // Style setting for Slider
   const settings = {
     dots: true,
     infinite: true,
@@ -24,34 +25,35 @@ export const Carrousel = () => {
         height: `${window.innerHeight}px`,
       }}
     >
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <Slider {...settings}>
         <div>
           <CarrouselImage
             className="carrousel_image"
             style={{
-              background: `url(${slide_one})`,
+              background: `url(${slideOne})`,
               height: `${window.innerHeight}px`,
             }}
-          ></CarrouselImage>
+          />
         </div>
 
         <div>
           <CarrouselImage
             className="carrousel_image"
             style={{
-              background: `url(${slide_two})`,
+              background: `url(${slideTwo})`,
               height: `${window.innerHeight}px`,
             }}
-          ></CarrouselImage>
+          />
         </div>
         <div>
           <CarrouselImage
             className="carrousel_image"
             style={{
-              background: `url(${slide_three})`,
+              background: `url(${slideThree})`,
               height: `${window.innerHeight}px`,
             }}
-          ></CarrouselImage>
+          />
         </div>
       </Slider>
     </CarrouselWrapper>

@@ -1,5 +1,5 @@
-import React, { useState, useCallback, useEffect } from "react";
-import { Slide } from "react-awesome-reveal";
+import React, { useState, useCallback, useEffect } from 'react';
+import { Slide } from 'react-awesome-reveal';
 
 import {
   CountDownWrapper,
@@ -8,27 +8,27 @@ import {
   CountDownItem,
   CountDownTime,
   CountDownTag,
-} from "./CountDown.styled";
+} from './CountDown.styled';
 
 export const CountDown = () => {
   const [time, setTime] = useState({
-    days: "0",
-    hours: "0",
-    minutes: "0",
-    seconds: "0",
+    days: '0',
+    hours: '0',
+    minutes: '0',
+    seconds: '0',
   });
 
-  const renderItem = (time, value) => (
+  const renderTime = (time, value) => (
     <CountDownItem>
       <CountDownTime>{time}</CountDownTime>
       <CountDownTag>{value}</CountDownTag>
     </CountDownItem>
   );
 
-  const getTimeUntil = useCallback((deadline) => {
+  const getTimeUntil = useCallback(deadline => {
     const time = Date.parse(deadline) - Date.parse(new Date());
     if (time < 0) {
-      console.log("Date passed");
+      console.log('Date passed');
     } else {
       const seconds = Math.floor((time / 1000) % 60);
       const minutes = Math.floor((time / 1000 / 60) % 60);
@@ -44,19 +44,18 @@ export const CountDown = () => {
   }, []);
 
   useEffect(() => {
-    setInterval(() => getTimeUntil("Dec, 20, 2021, 01:20:00"), 1000);
+    setInterval(() => getTimeUntil('Dec, 20, 2021, 01:20:00'), 1000);
   }, [getTimeUntil]);
 
   return (
     <Slide left delay={1000}>
       <CountDownWrapper>
         <CountDownTop>Event starts in</CountDownTop>
-
         <CountDownBottom>
-          {renderItem(time.days, "Days")}
-          {renderItem(time.hours, "HS")}
-          {renderItem(time.minutes, "Min")}
-          {renderItem(time.seconds, "Sec")}
+          {renderTime(time.days, 'Days')}
+          {renderTime(time.hours, 'HS')}
+          {renderTime(time.minutes, 'Min')}
+          {renderTime(time.seconds, 'Sec')}
         </CountDownBottom>
       </CountDownWrapper>
     </Slide>

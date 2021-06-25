@@ -1,1 +1,1 @@
-export { Featured } from "./Featured.react";
+export { Featured } from './Featured.react';

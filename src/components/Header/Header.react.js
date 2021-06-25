@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import { HeaderWrapper, Title, TitleWrapper } from "./Header.styled";
-import { SideDrawer } from "./SideDrawer";
+import { HeaderWrapper, Title, TitleWrapper } from './Header.styled';
+import { SideDrawer } from './SideDrawer';
 
 export const Header = () => {
   const [showHeader, setShowHeader] = useState(false);
@@ -15,13 +15,13 @@ export const Header = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <HeaderWrapper
       style={{
-        backgroundColor: showHeader ? "#2f2f2f" : "transparent",
+        backgroundColor: showHeader ? '#2f2f2f' : 'transparent',
       }}
     >
       <TitleWrapper>

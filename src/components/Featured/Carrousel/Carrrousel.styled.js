@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CarrouselWrapper = styled.div`
   height: 700px;

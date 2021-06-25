@@ -1,1 +1,1 @@
-export { CountDown } from "./CountDown.react";
+export { CountDown } from './CountDown.react';

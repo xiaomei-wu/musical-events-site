@@ -1,1 +1,1 @@
-export { ArtistName } from "./ArtistName.react";
+export { ArtistName } from './ArtistName.react';
