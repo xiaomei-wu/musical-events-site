@@ -11,7 +11,7 @@ import {
 } from './CountDown.styled';
 
 export const CountDown = () => {
-  const [time, setTime] = useState({
+  const [countdownTime, setCountDownTime] = useState({
     days: '0',
     hours: '0',
     minutes: '0',
@@ -25,22 +25,22 @@ export const CountDown = () => {
     </CountDownItem>
   );
 
+  // eslint-disable-next-line consistent-return
   const getTimeUntil = useCallback(deadline => {
     const time = Date.parse(deadline) - Date.parse(new Date());
     if (time < 0) {
-      console.log('Date passed');
-    } else {
-      const seconds = Math.floor((time / 1000) % 60);
-      const minutes = Math.floor((time / 1000 / 60) % 60);
-      const hours = Math.floor((time / (1000 * 60 * 60)) % 24);
-      const days = Math.floor(time / (1000 * 60 * 60 * 24));
-      setTime({
-        days,
-        hours,
-        minutes,
-        seconds,
-      });
+      return null;
     }
+    const seconds = Math.floor((time / 1000) % 60);
+    const minutes = Math.floor((time / 1000 / 60) % 60);
+    const hours = Math.floor((time / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(time / (1000 * 60 * 60 * 24));
+    setCountDownTime({
+      days,
+      hours,
+      minutes,
+      seconds,
+    });
   }, []);
 
   useEffect(() => {
@@ -52,10 +52,10 @@ export const CountDown = () => {
       <CountDownWrapper>
         <CountDownTop>Event starts in</CountDownTop>
         <CountDownBottom>
-          {renderTime(time.days, 'Days')}
-          {renderTime(time.hours, 'HS')}
-          {renderTime(time.minutes, 'Min')}
-          {renderTime(time.seconds, 'Sec')}
+          {renderTime(countdownTime.days, 'Days')}
+          {renderTime(countdownTime.hours, 'HS')}
+          {renderTime(countdownTime.minutes, 'Min')}
+          {renderTime(countdownTime.seconds, 'Sec')}
         </CountDownBottom>
       </CountDownWrapper>
     </Slide>

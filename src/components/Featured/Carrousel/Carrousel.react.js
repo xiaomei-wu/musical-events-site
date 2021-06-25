@@ -4,9 +4,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import slideOne from '../../../resources/images/slide_one.jpg';
-import slideTwo from '../../../resources/images/slide_two.jpg';
-import slideThree from '../../../resources/images/slide_three.jpg';
+import slideOne from 'resources/images/slide_one.jpg';
+import slideTwo from 'resources/images/slide_two.jpg';
+import slideThree from 'resources/images/slide_three.jpg';
 
 import { CarrouselWrapper, CarrouselImage } from './Carrrousel.styled';
 
