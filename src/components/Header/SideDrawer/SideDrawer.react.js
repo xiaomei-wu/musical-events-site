@@ -21,13 +21,12 @@ export const SideDrawer = () => {
     { where: 'venuenfo', value: 'Venue NFO' },
     { where: 'highlights', value: 'Highlights' },
     { where: 'pricing', value: 'Pricing' },
-    { where: 'location', value: 'Location' },
+    { where: 'map', value: 'Map' },
   ];
 
-  // eslint-disable-next-line no-unused-vars
   const scrollToElement = element => {
     scroller.scrollTo(element, {
-      duration: 1500,
+      duration: 900,
       delay: 100,
       smooth: true,
       offset: -150,
@@ -38,7 +37,7 @@ export const SideDrawer = () => {
   const renderItem = item => {
     return (
       // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions
-      <p onClick={() => alert(item.where)} key={item.where}>
+      <p onClick={() => scrollToElement(item.where)} key={item.where}>
         {item.value}
       </p>
     );

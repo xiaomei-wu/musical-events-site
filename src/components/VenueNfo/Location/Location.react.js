@@ -12,7 +12,7 @@ import {
 
 export const Location = () => {
   return (
-    <Zoom delay={500} className="vn_item">
+    <Zoom delay={200} className="vn_item">
       <div>
         <VenueNfoOuter>
           <VenueNfoInner>

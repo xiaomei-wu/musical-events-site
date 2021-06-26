@@ -12,11 +12,11 @@ export const ArtistNameWrapper = styled.div`
 `;
 export const Artist = styled.div`
   border: 2px solid white;
-  height: 121px;
+  height: 140px;
   margin: 6px;
   text-align: center;
   color: #fff;
   font-size: 40px;
-  padding: 21px 70px 0px 70px;
+  padding: 10px 70px 0px 70px;
   text-transform: uppercase;
 `;

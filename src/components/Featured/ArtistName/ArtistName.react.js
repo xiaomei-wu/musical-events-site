@@ -5,7 +5,7 @@ import { ArtistNameWrapper, Artist } from './ArtistName.styled';
 export const ArtistName = () => {
   return (
     <ArtistNameWrapper>
-      <Artist>Arianna Grande</Artist>
+      <Artist>Ariana Grande</Artist>
     </ArtistNameWrapper>
   );
 };

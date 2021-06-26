@@ -14,13 +14,27 @@ export const App = () => {
   return (
     <div className="App">
       <Header />
+
       <Element name="featured">
         <Featured />
       </Element>
-      <VenueNfo />
-      <Highlights />
-      <Pricing />
-      <Map />
+
+      <Element name="venuenfo">
+        <VenueNfo />
+      </Element>
+
+      <Element name="highlights">
+        <Highlights />
+      </Element>
+
+      <Element name="pricing">
+        <Pricing />
+      </Element>
+
+      <Element name="map">
+        <Map />
+      </Element>
+
       <Footer />
     </div>
   );
