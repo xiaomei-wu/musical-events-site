@@ -6,6 +6,7 @@ import { SideDrawer } from './SideDrawer';
 export const Header = () => {
   const [showHeader, setShowHeader] = useState(false);
 
+  // if the user scroll up, make the header transparent
   const handleScroll = () => {
     if (window.scrollY > 0) {
       setShowHeader(true);
@@ -14,6 +15,7 @@ export const Header = () => {
     }
   };
 
+// Build-in browser function
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
   }, []);

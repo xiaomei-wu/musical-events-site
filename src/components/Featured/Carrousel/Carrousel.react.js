@@ -13,13 +13,14 @@ import { CarrouselWrapper, CarrouselImage } from './Carrrousel.styled';
 export const Carrousel = () => {
   // Style setting for Slider
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     autoplay: true,
   };
 
   return (
+    //make the height of this div to the innerheight of the screen, which is nice
     <CarrouselWrapper
       style={{
         height: `${window.innerHeight}px`,

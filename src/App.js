@@ -4,7 +4,11 @@ import { Element } from 'react-scroll';
 
 import { Featured } from './components/Featured';
 import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { VenueNfo } from './components/VenueNfo';
 import { Highlights } from './components/Hightlights';
+import { Pricing } from './components/Pricing';
+import { Map } from './components/Map';
 
 export const App = () => {
   return (
@@ -12,8 +16,12 @@ export const App = () => {
       <Header />
       <Element name="featured">
         <Featured />
-        <Highlights />
       </Element>
+      <VenueNfo />
+      <Highlights />
+      <Pricing />
+      <Map />
+      <Footer />
     </div>
   );
 };

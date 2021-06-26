@@ -1,1 +1,1 @@
-export { Highlights } from './Hightlights.react';
+export { Highlights } from './Highlights.react';

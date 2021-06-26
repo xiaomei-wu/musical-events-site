@@ -73,4 +73,12 @@ module.exports = {
     'no-restricted-syntax': ['error', 'LabeledStatement', 'WithStatement'],
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
   },
+  overrides: [
+    {
+      files: ['**/*.ts?(x)'],
+      rules: {
+        'max-len': 'warn',
+      },
+    },
+  ],
 };
